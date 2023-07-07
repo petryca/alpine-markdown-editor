@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alpine Markdown Editor</title>
+<link href="style.css" rel="stylesheet">
+<script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<script src="app.js"></script>
+
+<main x-data="doc">
+    <div id="input"><textarea x-model="txt"></textarea></div>
+    <div id="preview" x-html="markdown"></div>
+    <div id="statusbar">
+        <span x-text="letters"></span> letters
+        <span x-text="words"></span> words
+    </div>
+</main>
